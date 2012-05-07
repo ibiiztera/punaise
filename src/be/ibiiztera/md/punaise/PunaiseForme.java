@@ -46,10 +46,11 @@ public class PunaiseForme extends javax.swing.JFrame {
             .addGap(0, 257, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("File");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("be/ibiiztera/md/punaise/model/bundle"); // NOI18N
+        jMenu1.setText(bundle.getString("FILE")); // NOI18N
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText(bundle.getString("EDIT")); // NOI18N
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -89,7 +90,7 @@ public class PunaiseForme extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (java.util.ResourceBundle.getBundle("be/ibiiztera/md/punaise/model/bundle").getString("NIMBUS").equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
